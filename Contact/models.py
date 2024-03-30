@@ -1,11 +1,10 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 
-# Create your models here.
 class Contact(models.Model):
-    name = models.CharField(max_length=128, null=False)
+    name = models.CharField(max_length=100)
     phone_number = PhoneNumberField()
-    email = models.EmailField()
+
 
 
 #  pipenv install django-phonenumber-field[phonenumberslite] {it's not worked}
